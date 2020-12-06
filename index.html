@@ -54,30 +54,64 @@
               <ul class="site-menu main-menu js-clone-nav ml-auto ">
                 <li class="active"><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="cars.html" class="nav-link">Cars</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
               </ul>
             </nav>
           </div>
 
-          <!-- row align-items-center position-relative -->
-        </div>
-        <!-- container -->
-      </div>
+        </div><!-- row align-items-center position-relative -->
+      </div><!-- container -->
     </header>
 
     <!-- Gambar -->
     <div class="ftco-blocks-cover-1">
-      <div class="ftco-cover-1 overlay innerpage" style="background-image: url('images/hero4.jpg')">
-        <div class="container">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-lg-6 text-center">
-              <h1>Putra Jenggolo Trans</h1>
-              <p>Kenyamaan anda adalah prioritas kami</p>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <!-- slide 1 -->
+          <div class="carousel-item active">
+            <div class="ftco-cover-1 overlay" style="background-image: url(images/hero4.jpg)" data-aos="fade"
+              data-stellar-background-ratio="0.5">
+              <div class="container">
+                <div class="row align-items-center justify-content-center">
+                  <div class="col-lg-8 text-center">
+                    <h1>Putra Jenggolo Trans</h1>
+                    <p>Siap Melayani Perjalanan Anda</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- slide 2 -->
+          <div class="carousel-item">
+            <div class="ftco-cover-1 overlay" style="background-image: url(images/slg.jpg)" data-aos="fade"
+              data-stellar-background-ratio="0.5">
+              <div class="container">
+                <div class="row align-items-center justify-content-center">
+                  <div class="col-lg-8 text-center">
+                    <h1>Liburan yang tak terlupakan..</h1>
+                    <p>Kami tidak sekedar melayani Anda dengan baik, tapi kami juga berusaha memberikan pengalaman
+                      perjalanan yang tak terlupakan untuk liburan Anda yang menyenangkan.. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- panah -->
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+
         </div>
+        <!--carousel-inner-->
       </div>
+      <!--carousel slide-->
     </div>
+    <!--ftco-blocks-cover-1-->
 
     <!-- Site Wrap -->
     <div class="site-section pt-0 pb-0 bg-light">
@@ -183,10 +217,6 @@
                       <span>Transmission</span>
                       <span class="spec">Automatic</span>
                     </li>
-                    <li>
-                      <span>Minium age</span>
-                      <span class="spec">18 years</span>
-                    </li>
                   </ul>
                   <div class="d-flex action">
                     <a href="contact.html" class="btn btn-primary">Rent Now</a>
@@ -220,10 +250,6 @@
                     <li>
                       <span>Transmission</span>
                       <span class="spec">Automatic</span>
-                    </li>
-                    <li>
-                      <span>Minium age</span>
-                      <span class="spec">18 years</span>
                     </li>
                   </ul>
                   <div class="d-flex action">
@@ -373,9 +399,12 @@
       <div class="row">
         <div class="col-lg-3">
           <h1 class="footer-heading mb-4">About Us</h1>
-          <p>Alamat : Jl. Banaran No.142, Banaran, Kec. Pesantren, Kediri, Jawa Timur 64129 </p>
-          <p>No. Telp : 082142226852</p>
-          <p>Email : pjt@gmail.com</p>
+          <p>Alamat :<br>Jl. Banaran No.142, Banaran, Kec. Pesantren, Kediri, Jawa Timur 64129 </p>
+          <p>No. Telp :<br>
+            <a href="https://api.whatsapp.com/send?phone=+6282136965561&text=Halo">082136965561</a>
+            <br><a href="https://api.whatsapp.com/send?phone=+6281252988976&text=Halo">081252988976</a></p>
+          <p>Email :
+            <br><a href="mailto: putrajenggolotrans@gmail.com">putrajenggolotrans@gmail.com</a></p>
         </div>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -393,16 +422,12 @@
         <div class="col-md-12">
           <div class="border-top pt-5">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>
-              document.write(new Date().getFullYear());
-            </script> Copyright © 2020 Putra Jenggolo Trans | Powered by NSscript <i class="icon-heart text-danger"
-              aria-hidden="true"></i>
+            Copyright © 2020 Putra Jenggolo Trans <i class="icon-heart text-danger" aria-hidden="true"></i>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
         </div>
       </div>
-
     </div>
   </footer>
 
@@ -421,6 +446,11 @@
   <script src="js/main.js"></script>
 
   <script type="text/javascript">
+    $(function () {
+      $("#datepicker").datepicker({
+        minDate: new Date(),
+      });
+    });
     //<![CDATA[
     $(document).on('click', '.send_form', function () {
       var input_sewa = document.getElementById('KTP');
